@@ -9,13 +9,13 @@
     crossorigin="anonymous"></script>
 <script src="https://unpkg.com/tippy.js@3/dist/tippy.all.min.js"></script>
 <script>
-    // $("body").find("*").each((item, element) => {
-    //   var ogtext = $(element).text()
-    //   var text = ogtext
-    //   text = text.replace(/\:([a-z_\-])\:/, "$1").replace(":", "")
-    //   text = text.replace("_", "-")
-    //   $(element).html($(element).html().replace(/:((?:\w)+[^\s]):/gi, (a, b) => `<i class="twa twa-${b.replace(/_/g, "-")}" data-tippy-content="${a}"></i>`))
-    // })
+    $("body").find("*").each((item, element) => {
+        var ogtext = $(element).text()
+        var text = ogtext
+        text = text.replace(/\:([a-z_\-])\:/, "$1").replace(":", "")
+        text = text.replace("_", "-")
+        $(element).html($(element).html().replace(/:((?:\w)+[^\s]):/gi, (a, b) => `<i class="twa twa-${b.replace(/_/g, "-")}" data-tippy-content="${a}"></i>`))
+    })
     twemoji.parse(document.body);
     tippy(document.querySelectorAll('.twa'), { delay: [500, 20], /*arrow: true, arrowType: "round"/**/ })
 </script>
