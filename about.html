@@ -1,0 +1,36 @@
+---
+title: About us
+---
+
+<section name="jumbotron">
+    <div class="jumbotron text-center">
+        <h1 class=display-4>About the creators of Luigi</h1>
+    </div>
+</section>
+
+<div class=container>
+
+    <div class="row">
+
+        {% for author in site.data.authors %}
+        {% assign colspan = 12 | divided_by: site.data.authors.length %}
+        <div class="col-{{ author.col | default: colspan }} text-center">
+            <img src="{{ author.avatar }}" style="border-radius:50%" width="100px" heigth="auto" /><br>
+            <h4>{{ author.username }}</h4>
+            {{ author.bio | default: "No bio available for this user" }}<br>
+            {% if author.socials.length > 0 %}
+            <br>
+            <h5>
+                Social Links
+            </h5>
+            <h2>
+                {% for social in author.socials %}
+                <a href="{{ social.link }}" target="_blank"><i class="fa{% if social.brand %}b{% else %}s{% endif %}" %>
+                        fa-{{ social.icon }}"></i></a>
+                {% endfor %}
+            </h2>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
