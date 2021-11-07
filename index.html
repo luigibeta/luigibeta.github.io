@@ -1,6 +1,19 @@
 ---
 title: Home
 permalink: /
+features:
+    - icon: level-up-alt
+      text: ":arrow_up: Leveling system (coming soon)"
+    - icon: language
+      text: ":boy: Multi-Language Support"
+    - icon: gamepad
+      text: ":video_game: A growing library of server games"
+    - icon: cogs
+      text: ":gear: Moderation System"
+      col: 6
+    - icon: globe
+      text: ":globe_with_meridians: A shiny blog for updates"
+      col: 6
 ---
 
 <section name="jumbotron">
@@ -17,25 +30,20 @@ permalink: /
 
 <div class=container>
 
-    <% const features=[ { icon: "level-up-alt" , text: ":arrow_up: Leveling system (coming soon)" }, { icon: "language"
-        , text: ":boy: Multi-Language Support" }, { icon: "gamepad" ,
-        text: ":video_game: A growing library of server games" }, { icon: "cogs" , text: ":gear: Moderation System" ,
-        col: 6 }, { icon: "globe" , text: ":globe_with_meridians: A shiny blog for updates" , col: 6 }, ] %>
-
         <h2 class="text-center">Features</h2>
         <br />
 
         <div class="row">
 
-            <% for (feature of features) { %>
-                <div class="col-<%= feature.col || 4 %> text-center">
+            {% for feature in page.features %}
+                <div class="col-{{ feature.col | default: 4 }} text-center">
                     <h2>
-                        <i class="fas fa-<%= feature.icon %>"></i>
+                        <i class="fas fa-{{ feature.icon }}"></i>
                     </h2>
                     <p>
-                        <%= feature.text %>
+                        {{ feature.text }}
                     </p>
                 </div>
-                <% } %>
+            {% endfor %}
         </div>
 </div>
