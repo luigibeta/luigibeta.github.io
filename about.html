@@ -28,9 +28,9 @@ permalink: /about/
                 {% for social in author.socials %}
                 <a href="{{ social.link }}" target="_blank"><i class="fa{% if social.brand %}b{% else %}s{% endif %}" %>
                         fa-{{ social.icon }}"></i></a>
-                {% endif %}
+                {% endfor %}
             </h2>
-            {% endfor %}
+            {% endif %}
         </div>
         {% endfor %}
     </div>
