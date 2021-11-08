@@ -1,0 +1,15 @@
+---
+name: "There's a new blog on here!"
+excerpt: "I'm very excited to announce our very first blog."
+date: 2019-05-01T09:42:00
+author: "Samplasion"
+hidden: false
+image: "https://cdn.glitch.com/5e045abf-cf34-4a2b-a253-3d19ba294b65%2FSchermata%202019-05-01%20alle%2011.04.51.png?1556701518404"
+---
+I'm very happy to announce the opening of our very first blog! I know, I know.
+It's very crude right now, but it's made out of our very own blog engine! Isn't that amazing? Yeah, we know it lacks
+comments, etc, but hey, we're gonna implement those soon! A downside with this is that we're gonna have to restart
+the whole project upon adding a post because of the way routes work, but hopefully we're fixing that very soon.
+Also, – and this'll be an easy fix – the posts are now displayed in alphabetical order, whereas they should be
+displayed in reverse chronological order.
+That said, I'll leave you for this post. Enjoy!
