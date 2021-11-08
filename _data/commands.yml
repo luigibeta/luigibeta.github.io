@@ -1,0 +1,237 @@
+- name: anime
+  description: View a randomly generated picture of an anime character
+  category: Fun
+- name: dadjoke
+  description: Hi, I'm Dad!
+  category: Fun
+- name: fact
+  description: View a random fact.
+  category: Fun
+- name: giverole
+  description: Use this command to give yourself a role via the bot's selfrole system.
+  category: Server Configuration
+- name: inspiro
+  description:
+    "Get a touch of AI-generated inspiration. (NOTE: some quotes may be
+    of inappropriate nature)"
+  category: Fun
+- name: rps
+  description: Rock, paper, scissors, SHOOT!
+  category: Fun
+- name: settings
+  description:
+    Configure various server settings, including welcoming channels and
+    selfrole.
+  category: Server Configuration
+- name: usage
+  description: View command statistics for Luigi Beta.
+  category: Server Configuration
+- name: addcoins
+  description: Generates coins and gives them to a specified user.
+- name: addexp
+  description: Generates EXP and gives them to a specified user.
+- name: lb
+  description: Shows a global leaderboard of the EXP various users have collected.
+- name: level
+  description: Shows a specified user's leveling stats.
+- name: eval
+  description: Runs specified code.
+- name: move
+  description: Move a message to a different channel.
+- name: lockdown
+  description: Locks an entire channel.
+- name: amiibo
+  description: Use this convienent search function to find any released amiibo.
+  category: Gaming
+- name: ban
+  description: Slam the ban hammer on a naughty member of your choice.
+  category: Moderation
+- name: code
+  description:
+    View a user's friend codes. Can be set with the wiiu, 3ds, and switch
+    commands.
+  category: Gaming
+- name: hug
+  description: Give a digital hug! Because why not?
+  category: Fun
+- name: kiss
+  description: Give a digital kiss! Because... why not?
+- name: jojo
+  description: Randomized quotes from JoJo's Bizarre Adventure
+  category: Fun
+- name: kick
+  description: Kick a naughty user to Mars.
+  category: Moderation
+- name: hugs
+  description: View a user's hugs.
+  category: Fun
+- name: credits
+  description: View a list of people this bot would not be possible without
+  category: Bot Utility
+- name: stats
+  description: View various stats for the bot.
+  category: Bot Utility
+- name: help
+  description:
+    Displays a list of available commands, or detailed information for
+    a specified command.
+  category: Bot Utility
+- name: invite
+  description: Displays all important information about inviting Luigi.
+  category: Bot Utility
+- name: coins
+  description: Shows a specified user's coin count.
+- name: reset
+  description: Resets a specified user's leveling.
+- name: bob-omb
+  description: Hey, Bob-omb!
+  category: Fun
+- name: ping
+  description: Checks the bot's ping.
+  category: Bot Utility
+- name: reboot
+  description: Reboots the bot.
+  category: Bot Utility
+  restriction: Bot Owner(s)
+- name: morse
+  description: Translates something to Morse.
+  category: Fun
+- name: piglatin
+  description: Translates something to Pig Latin.
+- name: give
+  description: Give some coins!
+- name: setup
+  description: Sets the bot up for the current server.
+  category: Server Configuration
+  restriction: Server Owner
+- name: delete
+  description: Delete a user from existence.
+  category: Fun
+- name: hitblock
+  description:
+    Luigi hits a block! Provide an image link as a parameter in order for
+    this command to work.
+  category: Fun
+- name: setlang
+  description: Sets the bot's language for the current server.
+  category: Server Configuration
+  restriction: Server Owner
+- name: 3ds
+  description: Set your 3DS friend code.
+- name: autorole
+  description: Set a role to be given upon joining your server.
+  category: Server Configuration
+  restriction: Manage Roles
+- name: cat
+  # Cat emoji
+  description: "\U0001F63A"
+  category: Fun
+- name: changelog
+  description: View the bot's latest update.
+  category: Bot Utility
+- name: clearqueue
+  description: Clear the queue.
+- name: codes
+  description: View someone's friend codes.
+- name: connect
+  description: Connect the bot to a voice channel.
+- name: disconnect
+  description: Disconnect the bot from a voice channel.
+  category: Bot Utility
+- name: dog
+  # Dog emoji
+  description: "\U0001F436"
+  category: Fun
+- name: dice
+  description: Roll the die and hope for the best!
+  category: Fun
+- name: feedback
+  description: Give feedback on the bot!
+  category: Bot Utility
+- name: partner
+  description: Create a partner embed.
+  category: Server Configuration
+  restriction: Administrator
+- name: pause
+  description: Pause the music that is currently playing.
+- name: play
+  description: Play specified music.
+- name: prune
+  description: Delete a specified amount of messages.
+  category: Moderation
+  restriction: Manage Messages
+- name: queue
+  description: View the list of upcoming music to be played.
+- name: reconnect
+  description: Reconnects the bot.
+- name: skip
+  description: Skip a song.
+- name: stop
+  description: Stop any playing music.
+- name: switch
+  description: Set your Nintendo Switch friend code.
+- name: volume
+  description: Set the current volume.
+- name: warn
+  description: Warn a specified member.
+  category: Moderation
+  restriction: Kick Members
+- name: warnings
+  description: View a member's warnings.
+  category: Moderation
+  restriction: Kick Members
+- name: wiiu
+  description: Set your WiiU NNID.
+- name: afk
+  description: Set a status that lets users know you are unavailable
+  category: General
+- name: resetwarns
+  description: Reset a specified user's warns.
+  category: Moderation
+  restriction: Kick Members
+- name: say
+  description: Make the bot say something.
+  category: Bot Utility
+  restriction: Bot Owner(s)
+- name: profile
+  description: Set a description for the userinfo command
+  category: General
+- name: serverinfo
+  description: View various information about the server.
+  category: General
+- name: todo
+  description: View the bot's todo list.
+  category: Bot Utility
+- name: userinfo
+  description: View various information about yourself or another user.
+  category: General
+- name: serverlock
+  description: Lock the server for a specified amount of time.
+  category: Server Configuration
+  restriction: Administrator
+- name: furry
+  description: Tanoo's a furry and you can't tell us otherwise.
+  category: Fun
+- name: set
+  description: WIP CMD
+  restriction: Bot Owner
+- name: 8ball
+  description: Your fate lies in the hands of a single button press.
+  category: Fun
+- name: pokemon
+  description: View the Pokedex.
+  category: Gaming
+- name: maker
+  description: Set your Maker ID.
+- name: steal
+  description: Grab an image and turn it into an emoji.
+  category: General
+- name: quote
+  description: Quote a message by ID
+  category: General
+- name: vote
+  description: Vote for a particular topic about the bot.
+  category: Bot Utility
+- name: setcode
+  description: Set any of your user codes.
+  category: Gaming

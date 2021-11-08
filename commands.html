@@ -2,8 +2,42 @@
 title: Commands
 permalink: /commands/
 ---
-<br><br><br><br><br><br>
+<!-- <br><br><br><br><br><br>
+
 <body>
-<h1 style="text-align:center;">The commands page is currently under maintainence.<br> Please DM tee#0187 or join the development server if you have questions.</h1>
+    <h1 style="text-align:center;">The commands page is currently under maintainence.<br> Please DM tee#0187 or join the
+        development server if you have questions.</h1>
 </body>
-<br><br><br><br><br><br>
+<br><br><br><br><br><br> -->
+
+{% assign all_categories = site.data.commands | map: "category" %}
+{% assign all_categories_sorted = all_categories | sort_natural %}
+
+{% for category in all_categories_sorted %}
+{% assign commands = site.data.commands | where: "category", category %}
+{% assign category_restrictions = site.data.commands | where: "category", category | map: "restriction" | size %}
+<h2>{{ category }}</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Command</th>
+            <th>Description</th>
+            {% if category_restrictions > 0 %}
+            <th>Restriction(s)</th>
+            {% endif %}
+        </tr>
+    </thead>
+    <tbody>
+        {% assign commands_sorted = commands | sort_natural: "name" %}
+        {% for command in commands_sorted %}
+        <tr>
+            <td><a href="{{ command.command }}">{{ command.name }}</a></td>
+            <td>{{ command.description }}</td>
+            {% if command.restriction %}
+            <td>{{ command.restriction }}</td>
+            {% endif %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endfor %}
