@@ -23,7 +23,9 @@ permalink: /commands/
     We do this to hide a table that shows at the end with all the commands
     {% endcomment %}
     {% if category == "" %}
-    {% assign category = "Uncategorized" %}
+    {% assign cat = "Uncategorized" %}
+    {% else %}
+    {% assign cat = category %}
     {% endif %}
 
     {% assign commands = site.data.commands | where: "category", category %}

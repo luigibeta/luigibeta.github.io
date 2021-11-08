@@ -28,18 +28,25 @@
   category: Server Configuration
 - name: addcoins
   description: Generates coins and gives them to a specified user.
+  category: Uncategorized
 - name: addexp
   description: Generates EXP and gives them to a specified user.
+  category: Uncategorized
 - name: lb
   description: Shows a global leaderboard of the EXP various users have collected.
+  category: Uncategorized
 - name: level
   description: Shows a specified user's leveling stats.
+  category: Uncategorized
 - name: eval
   description: Runs specified code.
+  category: Uncategorized
 - name: move
   description: Move a message to a different channel.
+  category: Uncategorized
 - name: lockdown
   description: Locks an entire channel.
+  category: Uncategorized
 - name: amiibo
   description: Use this convienent search function to find any released amiibo.
   category: Gaming
@@ -56,6 +63,7 @@
   category: Fun
 - name: kiss
   description: Give a digital kiss! Because... why not?
+  category: Uncategorized
 - name: jojo
   description: Randomized quotes from JoJo's Bizarre Adventure
   category: Fun
@@ -81,8 +89,10 @@
   category: Bot Utility
 - name: coins
   description: Shows a specified user's coin count.
+  category: Uncategorized
 - name: reset
   description: Resets a specified user's leveling.
+  category: Uncategorized
 - name: bob-omb
   description: Hey, Bob-omb!
   category: Fun
@@ -100,6 +110,7 @@
   description: Translates something to Pig Latin.
 - name: give
   description: Give some coins!
+  category: Uncategorized
 - name: setup
   description: Sets the bot up for the current server.
   category: Server Configuration
@@ -118,6 +129,7 @@
   restriction: Server Owner
 - name: 3ds
   description: Set your 3DS friend code.
+  category: Uncategorized
 - name: autorole
   description: Set a role to be given upon joining your server.
   category: Server Configuration
@@ -131,10 +143,13 @@
   category: Bot Utility
 - name: clearqueue
   description: Clear the queue.
+  category: Uncategorized
 - name: codes
   description: View someone's friend codes.
+  category: Uncategorized
 - name: connect
   description: Connect the bot to a voice channel.
+  category: Uncategorized
 - name: disconnect
   description: Disconnect the bot from a voice channel.
   category: Bot Utility
@@ -154,24 +169,32 @@
   restriction: Administrator
 - name: pause
   description: Pause the music that is currently playing.
+  category: Music
 - name: play
   description: Play specified music.
+  category: Music
 - name: prune
   description: Delete a specified amount of messages.
   category: Moderation
   restriction: Manage Messages
 - name: queue
   description: View the list of upcoming music to be played.
+  category: Music
 - name: reconnect
   description: Reconnects the bot.
+  category: Music
 - name: skip
   description: Skip a song.
+  category: Music
 - name: stop
   description: Stop any playing music.
+  category: Music
 - name: switch
   description: Set your Nintendo Switch friend code.
+  category: Uncategorized
 - name: volume
   description: Set the current volume.
+  category: Music
 - name: warn
   description: Warn a specified member.
   category: Moderation
@@ -182,6 +205,7 @@
   restriction: Kick Members
 - name: wiiu
   description: Set your WiiU NNID.
+  category: Uncategorized
 - name: afk
   description: Set a status that lets users know you are unavailable
   category: General
