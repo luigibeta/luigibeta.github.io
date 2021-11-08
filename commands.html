@@ -23,7 +23,7 @@ permalink: /commands/
     size %}
     <h2>{{ category }}</h2>
     <p>{{ commands | size }} commands</p>
-    <table class="table table-hover table-commands table-responsive">
+    <table class="table table-hover table-commands table-responsive" style="min-width: 100%;">
         <thead>
             <tr>
                 <th>Command</th>
@@ -41,8 +41,7 @@ permalink: /commands/
                 <td>{{ command.description }}</td>
                 {% if command.restriction %}
                 <td>{{ command.restriction }}</td>
-                {% endif %}
-                {% if command_restrictions > 0 %}
+                {% elsif category_restrictions > 0 %}
                 <!-- No restrictions -->
                 <td></td>
                 {% endif %}
