@@ -167,34 +167,13 @@
   description: Create a partner embed.
   category: Server Configuration
   restriction: Administrator
-- name: pause
-  description: Pause the music that is currently playing.
-  category: Music
-- name: play
-  description: Play specified music.
-  category: Music
 - name: prune
   description: Delete a specified amount of messages.
   category: Moderation
   restriction: Manage Messages
-- name: queue
-  description: View the list of upcoming music to be played.
-  category: Music
-- name: reconnect
-  description: Reconnects the bot.
-  category: Music
-- name: skip
-  description: Skip a song.
-  category: Music
-- name: stop
-  description: Stop any playing music.
-  category: Music
 - name: switch
   description: Set your Nintendo Switch friend code.
   category: Uncategorized
-- name: volume
-  description: Set the current volume.
-  category: Music
 - name: warn
   description: Warn a specified member.
   category: Moderation
