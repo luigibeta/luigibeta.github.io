@@ -19,7 +19,11 @@ permalink: /blog/rss.xml
                 {{ post.url | prepend: site.url }}
             </link>
             <description>
+                {% if post.excerpt %}
+                {{ post.excerpt | escape }}
+                {% else %}
                 {{ post.content | truncate: '400' | escape }}
+                {% endif %}
             </description>
             <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
             <guid>
