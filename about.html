@@ -20,18 +20,6 @@ permalink: /about/
             <img src="{{ author.avatar }}" style="border-radius:50%" width="100px" height="auto" /><br>
             <h4>{{ author.username }}</h4>
             {{ author.bio | default: "No bio available for this user" }}<br>
-            {% if author.socials.length > 0 %}
-            <br>
-            <h5>
-                Social Links
-            </h5>
-            <h2>
-                {% for social in author.socials %}
-                <a href="{{ social.link }}" target="_blank"><i class="fa{% if social.brand %}b{% else %}s{% endif %}" %>
-                        fa-{{ social.icon }}"></i></a>
-                {% endfor %}
-            </h2>
-            {% endif %}
         </div>
         {% endfor %}
     </div>
