@@ -23,7 +23,7 @@ permalink: /commands/
     {% comment %}
     We do this to hide a table that shows at the end with all the commands
     {% endcomment %}
-    {% if category == "" %}
+    {% if category == "" or category == nil %}
     {% assign cat = "Uncategorized" %}
     {% else %}
     {% assign cat = category %}
