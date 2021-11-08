@@ -20,6 +20,10 @@ permalink: /about/
             <img src="{{ author.avatar }}" style="border-radius:50%" width="100px" height="auto" /><br>
             <h4>{{ author.username }}</h4>
             {{ author.bio | default: "No bio available for this user" }}<br>
+            {% if author.twitter %}
+            <br>
+            <a href='https://www.twitter.com/{{ author.twitter }}' target="_blank">Twitter page</a>
+            {% endif %}
         </div>
         {% endfor %}
     </div>
