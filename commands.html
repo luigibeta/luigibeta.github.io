@@ -11,11 +11,11 @@ permalink: /commands/
 <br><br><br><br><br><br> -->
 
 {% assign all_categories = site.data.commands | map: "category" %}
-{% assign all_categories_sorted = all_categories | sort_natural %}
+{% assign all_categories_sorted = all_categories | uniq | sort_natural %}
 
 {% for category in all_categories_sorted %}
 {% assign commands = site.data.commands | where: "category", category %}
-{% assign category_restrictions = site.data.commands | where: "category", category | map: "restriction" | size %}
+{% assign category_restrictions = site.data.commands | where: "category", category | map: "restriction" | uniq | size %}
 <h2>{{ category }}</h2>
 <table class="table table-striped">
     <thead>
@@ -35,6 +35,10 @@ permalink: /commands/
             <td>{{ command.description }}</td>
             {% if command.restriction %}
             <td>{{ command.restriction }}</td>
+            {% endif %}
+            {% if command_restrictions > 0 %}
+            <!-- No restrictions -->
+            <td></td>
             {% endif %}
         </tr>
         {% endfor %}
