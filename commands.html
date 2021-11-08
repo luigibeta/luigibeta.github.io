@@ -18,19 +18,17 @@ permalink: /commands/
     {% assign all_categories_sorted = all_categories | uniq | sort_natural %}
 
     {% for category in all_categories_sorted %}
-    {{ all_categories_sorted | jsonify }}
+    <!-- {{ all_categories_sorted | jsonify }} -->
 
     {% comment %}
     We do this to hide a table that shows at the end with all the commands
     {% endcomment %}
     {% if category == "" or category == nil %}
-    {% assign cat = "Uncategorized" %}
-    {% else %}
-    {% assign cat = category %}
+    {% continue %}
     {% endif %}
 
-    {% assign commands = site.data.commands | where: "category", cat %}
-    {% assign total_restrs = site.data.commands | where: "category", cat | map: "restriction" | uniq | size %}
+    {% assign commands = site.data.commands | where: "category", category %}
+    {% assign total_restrs = site.data.commands | where: "category", category | map: "restriction" | uniq | size %}
     <h2>{{ category }}</h2>
     <p>{{ commands | size }} commands</p>
     <table class="table table-hover table-commands table-responsive" style="min-width: 100%;">
