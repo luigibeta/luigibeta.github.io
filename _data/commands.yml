@@ -26,15 +26,6 @@
 - name: usage
   description: View command statistics for Luigi Beta.
   category: Server Configuration
-- name: eval
-  description: Runs specified code.
-  category: Uncategorized
-- name: move
-  description: Move a message to a different channel.
-  category: Uncategorized
-- name: lockdown
-  description: Locks an entire channel.
-  category: Uncategorized
 - name: amiibo
   description: Use this convienent search function to find any released amiibo.
   category: Gaming
@@ -86,9 +77,6 @@
   category: Fun
 - name: piglatin
   description: Translates something to Pig Latin.
-- name: give
-  description: Give some coins!
-  category: Uncategorized
 - name: setup
   description: Sets the bot up for the current server.
   category: Server Configuration
@@ -146,9 +134,6 @@
   description: Delete a specified amount of messages.
   category: Moderation
   restriction: Manage Messages
-- name: switch
-  description: Set your Nintendo Switch friend code.
-  category: Uncategorized
 - name: warn
   description: Warn a specified member.
   category: Moderation
