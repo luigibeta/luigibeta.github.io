@@ -22,8 +22,10 @@ permalink: /commands/
     {% comment %}
     We do this to hide a table that shows at the end with all the commands
     {% endcomment %}
-    {% if category.size < 2 %} {% continue %} {% endif %}
-    
+    {% if category == "" %}
+    {% assign category = "Uncategorized" %}
+    {% endif %}
+
     {% assign commands = site.data.commands | where: "category", category %}
     {% assign total_restrs = site.data.commands | where: "category", category | map: "restriction" | uniq | size %}
     <h2>{{ category }}</h2>
