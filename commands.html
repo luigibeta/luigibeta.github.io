@@ -19,17 +19,16 @@ permalink: /commands/
 
     {% for category in all_categories_sorted %}
     {% assign commands = site.data.commands | where: "category", category %}
-    {% assign category_restrictions = site.data.commands | where: "category", category | map: "restriction" | uniq |
-    size %}
+    {% assign total_restrs = site.data.commands | where: "category", category | map: "restriction" | uniq | size %}
     <h2>{{ category }}</h2>
     <p>{{ commands | size }} commands</p>
     <table class="table table-hover table-commands table-responsive" style="min-width: 100%;">
         <thead>
             <tr>
-                <th>Command</th>
-                <th>Description</th>
-                {% if category_restrictions > 0 %}
-                <th>Restriction(s)</th>
+                <th scope="col">Command</th>
+                <th scope="col">Description</th>
+                {% if total_restrs > 0 %}
+                <th scope="col">Restriction(s)</th>
                 {% endif %}
             </tr>
         </thead>
@@ -37,13 +36,13 @@ permalink: /commands/
             {% assign commands_sorted = commands | sort_natural: "name" %}
             {% for command in commands_sorted %}
             <tr>
-                <td><a href="{{ command.command }}">{{ command.name }}</a></td>
+                <th scope="row">{{ command.name }}</th>
                 <td>{{ command.description }}</td>
                 {% if command.restriction %}
                 <td>{{ command.restriction }}</td>
-                {% elsif category_restrictions > 0 %}
+                {% elsif total_restrs > 0 %}
                 <!-- No restrictions -->
-                <td></td>
+                <td><i>None</i></td>
                 {% endif %}
             </tr>
             {% endfor %}
