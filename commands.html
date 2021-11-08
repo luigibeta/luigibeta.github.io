@@ -18,6 +18,7 @@ permalink: /commands/
     {% assign all_categories_sorted = all_categories | uniq | sort_natural %}
 
     {% for category in all_categories_sorted %}
+    {{ all_categories_sorted | jsonify }}
 
     {% comment %}
     We do this to hide a table that shows at the end with all the commands
