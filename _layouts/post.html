@@ -10,8 +10,8 @@ layout: default
         <h1 class=display-3>
             {{ page.name }}
         </h1>
-        <p class=lead>By <img src="<%=feature.avatar%>" width="20px" height="20px"
-                style="vertical-align: middle; border-radius: 50%;" />&nbsp;{{ page.author }} — Posted on
+        <p class=lead>By <img src="{{ author.avatar }}" width="20px" height="20px"
+                style="vertical-align: middle; border-radius: 50%;" />&nbsp;{{ author.username }} — Posted on
             {{ page.date | date_to_string }} at {{ page.date | date: "%H:%M" }}
         </p>
     </div>
