@@ -28,8 +28,8 @@ permalink: /commands/
     {% assign cat = category %}
     {% endif %}
 
-    {% assign commands = site.data.commands | where: "category", category %}
-    {% assign total_restrs = site.data.commands | where: "category", category | map: "restriction" | uniq | size %}
+    {% assign commands = site.data.commands | where: "category", cat %}
+    {% assign total_restrs = site.data.commands | where: "category", cat | map: "restriction" | uniq | size %}
     <h2>{{ category }}</h2>
     <p>{{ commands | size }} commands</p>
     <table class="table table-hover table-commands table-responsive" style="min-width: 100%;">
