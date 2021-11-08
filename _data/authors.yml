@@ -1,7 +1,7 @@
 - username: tee
   avatar: https://cdn.discordapp.com/avatars/368792134645448704/a_a9757006e959b4ebd3589cbb3a9c7138.gif?size=4096
   id: "368792134645448704"
-  bio: "I'm a Minecraft developer, and I'm a big fan of Luigi. I'm also a big fan of the Nintendo Switch. (temp bio)"
+  bio: "Hey there, I'm tee. Big fan of Henry Stickmin and just games in general. If you'd like to play Smash or another Switch game with me, I probably have it, so don't hesitate to give me a shout, as well as if you have issues with the bot."
   socials:
     - icon: twitter
       brand: true
@@ -18,7 +18,7 @@
 - username: Samplasion
   avatar: https://cdn.discordapp.com/avatars/280399026749440000/5d7eaab7d5f87e1a53e5a52915c984ba.png?size=4096
   id: "280399026749440000"
-  bio: "I'm a Minecraft developer, and I'm a big fan of Luigi. I'm also a big fan of the Nintendo Switch. (temp bio)"
+  bio: "Hey there, I'm Luigi's co-developer (well, actually, I develop the website while tee does all the bot's commands). If you notice something weird with the website, don't hesitate to tell me!"
   socials:
     - icon: twitter
       brand: true
