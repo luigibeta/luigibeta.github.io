@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 
+{%- capture page_desc -%}
+{%- if page.excerpt -%}
+{{ page.excerpt | strip_html | strip_newlines }}
+{%- elsif page.description -%}
+{{ page.description | strip_html | strip_newlines }}
+{%- else -%}
+Luigi is a public Discord bot made for everyone to enjoy, filled with fun and useful commands.
+{%- endif -%}
+{%- endcapture -%}
+
+{%- capture blog_suffix -%}
+{% if page.url contains "/blog" and page.title != "Blog" %} Blog{% endif %}
+{%- endcapture -%}
+
 <head>
     <title>
-        {% if page.title %}{{ page.title }} – {% endif %}Luigi Beta
+        {% if page.title %}{{ page.title }} – {% endif %}Luigi Beta{{blog_suffix}}
     </title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,11 +30,9 @@
 
     <meta property="og:image"
         content="https://cdn.discordapp.com/attachments/503185444226334724/511560548215947264/Icon_Luigi.png">
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} – {% endif %}Luigi">
-    <meta name="og:description"
-        content="Luigi is a public Discord bot made for everyone to enjoy, filled with fun and useful commands.">
-    <meta name="description"
-        content="Luigi is a public Discord bot made for everyone to enjoy, filled with fun and useful commands.">
+    <meta property="og:title" content="{% if page.title %}{{ page.title }} – {% endif %}Luigi Beta{{blog_suffix}}">
+    <meta name="og:description" content="{{ page_desc }}">
+    <meta name="description" content="{{ page_desc }}">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
