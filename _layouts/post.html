@@ -1,0 +1,155 @@
+---
+# Depend on the default layout
+layout: default
+---
+
+{% assign author = site.data.authors[page.author] %}
+
+<section name="jumbotron">
+    <div class="jumbotron jumbotron-inside text-center">
+        <h1 class=display-3>
+            {{ page.name }}
+        </h1>
+        <p class=lead>By <img src="<%=feature.avatar%>" width="20px" height="20px"
+                style="vertical-align: middle; border-radius: 50%;" />&nbsp;{{ page.author }} — Posted on
+            {{ page.date | date_to_string }} at {{ page.date | date: "%H:%M" }}
+        </p>
+    </div>
+</section>
+
+<style>
+    /* DARK THEEEEEEME */
+    /*@media screen and (prefers-color-scheme: dark) {*/
+    body[data-dark="dark"] {
+        background-color: #141414;
+        color: #ededed;
+    }
+
+    [data-dark="dark"] .jumbotron {
+        color: #ededed;
+        background-color: #262626;
+    }
+
+    [data-dark="dark"] .table-hover tbody tr:hover {
+        background-color: rgba(255, 255, 255, .075);
+    }
+
+    [data-dark="dark"] .table tbody+tbody {
+        border-top: 2px solid #34383c;
+    }
+
+    [data-dark="dark"] .table td,
+    .table th {
+        border-top: 1px solid #34383c;
+    }
+
+    [data-dark="dark"] .card {
+        background-color: #262626;
+        box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2);
+        border: 1px solid rgba(255, 255, 255, .125);
+    }
+
+    /*}*/
+</style>
+
+<style>
+    .jumbotron {
+        background-image: url({{ page.image | default: "https://i2.wp.com/www.nintendo-insider.com/wp-content/uploads/2017/06/mario-luigi-superstar-saga-bowsers-minions-art.jpg" }});
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-blend-mode: overlay;
+    }
+</style>
+
+<script>
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "") + expires + "; sameSite=lax; path=/";
+    }
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+        }
+        return null;
+    }
+    function eraseCookie(name) {
+        document.cookie = name + '=; Max-Age=-99999999;';
+    }
+    if (!getCookie("darkmode")) {
+        setCookie("darkmode", window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches, 365 * 100); // 1 century
+    }
+
+    var element = document.getElementById("body");
+    // element.classList.toggle("dark");
+
+    window.check = function () {
+        var element = document.getElementById("body");
+        if (getCookie("darkmode") == "true") {
+            element.setAttribute("data-dark", "dark")
+        } else {
+            element.setAttribute("data-dark", "")
+        }
+        document.getElementById('dml').innerText = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? "Light theme" : "Dark theme";
+    }
+    setInterval(check, 200);
+
+
+    document.getElementById('defaultCheck1').checked = (getCookie("darkmode") == "true");
+</script>
+
+<div class=container>
+
+    {{ content }}
+
+    <div class="card">
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-8"><br>
+                <span style="font-size:1.6em; text-align:center">
+                    {{ author.username }}
+                </span>
+                <p>
+                    {{ author.bio | default: "No biography set." }}
+                </p>
+            </div>
+        </div>
+
+    </div><br>
+    <div id="disqus_thread"></div>
+
+</div>
+<script>
+    tippy(document.querySelector('#invitebtn'), { delay: [100, 20], /*arrow: true, arrowType: "round"/**/ })
+</script>
+<script src="//code.tidio.co/khdtt8ihnaxtwlkj5wcvprkc4gbsjdzj.js"></script>
+<script>
+
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+    var disqus_config = function () {
+        this.page.url = "https://luigibeta.glitch.me/blog/<%= data.url %>";  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = "<%= data.url %>"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+
+    (function () { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = 'https://luigi-beta-blog.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+        Disqus.</a></noscript>

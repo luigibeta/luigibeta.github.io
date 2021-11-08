@@ -13,12 +13,13 @@ permalink: /about/
 
     <div class="row">
 
-        {% for author in site.data.authors %}
+        {% for entry in site.data.authors %}
+        {% assign author = entry[1] %}
         {% assign length = site.data.authors | size %}
         {% assign colspan = 12 | divided_by: length %}
         <div class="col-{{ author.col | default: colspan }} text-center">
             <img src="{{ author.avatar }}" style="border-radius:50%" width="100px" height="auto" /><br>
-            <h4>{{ author.username }}</h4>
+            <h4>{{ entry[0] }}</h4>
             {{ author.bio | default: "No bio available for this user" }}<br>
             {% if author.twitter %}
             <br>
