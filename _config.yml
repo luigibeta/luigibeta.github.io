@@ -4,7 +4,7 @@ markdown: kramdown
 
 collections:
   posts:
-    permalink: /blog/:year/:month/:day/:slug/
+    permalink: /blog/:slug/
     layout: post
 
 defaults:
