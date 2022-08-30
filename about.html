@@ -18,7 +18,6 @@ permalink: /about/
         {% assign length = site.data.authors | size %}
         {% assign colspan = 12 | divided_by: length %}
         <div class="col-{{ author.col | default: colspan }} text-center">
-            <img src="{{ author.avatar }}" style="border-radius:50%" width="100px" height="auto" /><br>
             <h4>{{ author.username }}</h4>
             {{ author.bio | default: "No bio available for this user" }}<br>
             {% if author.twitter %}
